@@ -1,6 +1,6 @@
 // src/components/PreviewPanel.js
 import React from 'react';
-import { useAnalysisData } from './AnalysisContext';
+import { useAnalysisData } from '../context/AnalysisContext';
 import { categories } from '../categories';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 

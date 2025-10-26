@@ -1,6 +1,6 @@
 // src/context/AnalysisContext.js
 import React, { createContext, useContext } from 'react';
-import { useAnalysis } from '../hooks/src/useAnalysis';
+import { useAnalysis } from '../hooks/useAnalysis';
 
 const AnalysisContext = createContext(null);
 

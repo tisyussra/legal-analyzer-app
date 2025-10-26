@@ -1,6 +1,6 @@
 // src/components/ResultsDashboard.js
 import React from 'react';
-import { useAnalysisData } from './AnalysisContext';
+import { useAnalysisData } from '../context/AnalysisContext';
 import { categories } from '../categories';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 

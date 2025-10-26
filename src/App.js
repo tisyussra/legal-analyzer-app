@@ -1,6 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
-import { useAnalysisData } from './components/AnalysisContext';
+import { useAnalysisData } from './context/AnalysisContext';
 import HeaderControls from './components/HeaderControls';
 import PreviewPanel from './components/PreviewPanel';
 import ResultsDashboard from './components/ResultsDashboard';
