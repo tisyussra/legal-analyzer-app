@@ -2,8 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Make sure you have this file for Tailwind
-import App from './App';
-import { AnalysisProvider } from './context/AnalysisContext';
+import App from './app';
+import { AnalysisProvider } from './components/AnalysisContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

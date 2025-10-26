@@ -1,6 +1,6 @@
 // src/components/HeaderControls.js
 import React from 'react';
-import { useAnalysisData } from '../context/AnalysisContext';
+import { useAnalysisData } from './AnalysisContext';
 import { categories } from '../categories';
 import { Upload, Download } from 'lucide-react';
 

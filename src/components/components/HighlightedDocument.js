@@ -1,6 +1,6 @@
 // src/components/HighlightedDocument.js
 import React from 'react';
-import { useAnalysisData } from '../context/AnalysisContext';
+import { useAnalysisData } from './AnalysisContext';
 
 export default function HighlightedDocument() {
   const { highlightedHtml } = useAnalysisData();
