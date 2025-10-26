@@ -513,13 +513,13 @@ export default function LegalDocumentHighlighter() {
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
               {Object.entries(categories).map(([key, cat]) => {
                 const entries = Object.entries(counts[key] || {}).sort((a, b) => b[1] - a[1]);
                 return (
                   <div key={key} className="bg-white rounded-lg shadow p-4" style={{ borderLeft: '4px solid ' + cat.color }}>
                     <h3 className="font-bold mb-3">{cat.label}</h3>
-                    <div className="space-y-2 max-h-40 overflow-y-auto">
+                    <div className="space-y-2 max-h-96 overflow-y-auto">
                       {entries.length > 0 ? entries.map(([term, count]) => {
                         const current = currentOccurrence[term] || 1;
                         const isHistorical = key === 'historicalReferences';
@@ -531,7 +531,7 @@ export default function LegalDocumentHighlighter() {
 
                         return (
                           <div key={term} className="flex flex-col gap-1 text-sm">
-                            <div className="flex justify-between items-center gap-2">
+                            <div className="flex justify-between items-start gap-2">
                               <button
                                 onClick={() => {
                                   setSelectedTerm(term);
@@ -541,16 +541,18 @@ export default function LegalDocumentHighlighter() {
                                     if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                   }, 100);
                                 }}
-                                className="text-indigo-600 hover:underline truncate flex-1 text-left"
+                                className="text-indigo-600 hover:underline flex-1 text-left break-words"
                               >
                                 {showContext && context ? (
-                                  <span>
-                                    <span className="text-gray-500 text-xs">{context}</span>
+                                  <span className="block">
+                                    <span className="text-gray-500 text-xs block">{context}</span>
                                     <span className="font-semibold">{term}</span>
                                   </span>
-                                ) : term}
+                                ) : (
+                                  <span className="break-words">{term}</span>
+                                )}
                               </button>
-                              <div className="flex items-center gap-1">
+                              <div className="flex items-center gap-1 flex-shrink-0">
                                 {count > 1 && (
                                   <div className="flex items-center gap-1">
                                     <button onClick={() => navigateTerm(term, -1, count)} className="p-1 hover:bg-gray-200 rounded">
