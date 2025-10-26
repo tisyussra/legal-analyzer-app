@@ -1,6 +1,6 @@
 // src/hooks/useAnalysis.js
 import { useState, useMemo } from 'react';
-import { categories } from '../categories'; // Import the categories
+import { categories } from '../../categories'; // Import the categories
 
 // Helper function
 const sanitizeTermForId = (term) => {
