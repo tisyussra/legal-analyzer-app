@@ -191,7 +191,7 @@ export const categories = {
       /amici curiae/gi,
       /amicus brief/gi,
       /friend of the court/gi,
-s     /amici brief/gi,
+      /amici brief/gi,
     ]
   },
 };

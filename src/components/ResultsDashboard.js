@@ -69,7 +69,7 @@ export default function ResultsDashboard({
                         )}
                         {count === 1 && (
                           <span className="px-2 py-1 bg-gray-100 rounded-full text-xs font-semibold">{count}</span>
-t                     )}
+                        )}
                       </div>
                     </div>
                   </div>
